@@ -1,6 +1,6 @@
 # Online Book Store
 
-please go through the demo it's the project file
+(please go through the demo it's the project file)
 
 Online Book Store is a web application built using Spring Boot, Spring Security, and Thymeleaf. It provides a platform for users to browse and purchase books online.
 

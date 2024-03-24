@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+        .fail{
+        color:red;
+        }
+    </style>
+</head>
+<body>
+<form action="#" th:action="@{/authenticateTheUser}" method="post">
+  <!-- Check for login error msg -->
+  <div th:if="${param.error}">
+    <i class="fail">Enter a valid user name / password</i>
+  </div>
+  <div th:if="${param.logout}">
+    <i>Logged Out Successfully</i>
+  </div>
+  <p>
+    User Name: <input type="text" name="username"/>
+  </p>
+  <p>
+    Password:<input type="password" name="password"/>
+  </p>
+  <input type="submit" value="login"/>
+  <div>
+    <a th:href="@{/register/showRegistrationForm}" class="btn btn-primary mt-3" role="button" aria-pressed="true">Register New User</a>
+  </div>
+
+</form>
+
+</body>
+</html>

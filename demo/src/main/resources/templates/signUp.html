@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="#" th:action="@{/saveUser}" th:object="${user}" method="post">
+        <label>
+            User Name:<input type="text" th:field="*{username}" required/>
+        </label>
+        <label >
+            Password:<input type="text" th:field="*{password}" required>
+        </label>
+        <!--<div>
+            <label>Roles:</label>
+            <input type="text" th:field="*{roles}" required>
+        </div>-->
+        <div>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="ROLE_USER">User</option>
+
+            </select>
+        </div>
+
+     <!-- <label>Authority: <input type="text" th:field="*{authority}" /></label><br/>-->
+        <!--<label>Authorities:<select></select></label>-->
+        <br>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+</body>
+</html>
